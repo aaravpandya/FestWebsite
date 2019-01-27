@@ -14,6 +14,7 @@ namespace FestWebSite.Controllers
             _DbContext = dbContext;
         }
         [Route("")]
+        [Route("[controller]/[action]")]
         public IActionResult Home()
         {
             return View();
