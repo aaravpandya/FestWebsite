@@ -25,7 +25,7 @@ namespace FestWebSite
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
+                options.UseSqlServer(Configuration["ConnectionStrings:Production"]));
             services.AddMvc().AddSessionStateTempDataProvider();
             services.AddMemoryCache();
             services.AddSession();
