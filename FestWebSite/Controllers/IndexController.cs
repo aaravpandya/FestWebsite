@@ -1,4 +1,6 @@
-﻿using FestWebSite.Models;
+﻿using System.Collections.Generic;
+using System.Linq;
+using FestWebSite.Models;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -36,6 +38,14 @@ namespace FestWebSite.Controllers
             _DbContext.SaveChanges();
 
             return RedirectToAction("Home", "Index");
+        }
+
+        [Route("admin")]
+        public IActionResult Admin()
+        {
+            List<RegisterModel> rms = _DbContext.RegisterModels.ToList();
+            ViewBag.rms = rms;
+            return View();
         }
     }
 }

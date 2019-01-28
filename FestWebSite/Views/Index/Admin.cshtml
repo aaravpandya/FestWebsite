@@ -1,0 +1,36 @@
+﻿
+
+<html>
+<head>
+    <title>Admin Panel</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <td>Name</td>
+        <td>Contact Number</td>
+        <td>Email</td>
+        <td>Events</td>
+        <td>Accommodation</td>
+        <td>University</td>
+        <td>Number of Participants</td>
+    </tr>
+    </thead>
+    @foreach (RegisterModel r in ViewBag.rms)
+    {
+        <tr>
+            <td>@r.Name</td>
+            <td>@r.ContactNumber</td>
+            <td>@r.Email</td>
+
+            <td>@r.Events</td>
+            <td>@r.Accomodation</td>
+            <td>@r.UniversityName</td>
+            <td>@r.NumberOfParticipants</td>
+        </tr>
+    }
+</table>
+
+</body>
+</html>
