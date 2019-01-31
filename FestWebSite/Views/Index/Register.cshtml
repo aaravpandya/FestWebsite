@@ -177,7 +177,7 @@
                             <h6 class="reply-title">Registration Form</h6>
                             <div class="comment-reply-form clearfix">
 
-                                <form asp-action="PostData" asp-controller="Index" method="post">
+                                <form asp-action="PostDataAsync" asp-controller="Index" method="post">
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
@@ -197,7 +197,7 @@
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label asp-for="Email" class="registrattion-title">Email</label>
-                                                <input asp-for="Email" type="email" required>
+                                                <input style="color: white;" asp-for="Email" type="email" required>
                                             </div>
                                         </div>
 
