@@ -11,7 +11,8 @@ namespace FestWebSite.Controllers
     {
         private AppDbContext _DbContext;
 
-        public string SendGridDetails = @"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";
+        private string SendGridDetails = @"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";
+        private string SendGridDetails2 = @"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";
 
         public IndexController(AppDbContext dbContext)
         {
@@ -38,7 +39,7 @@ namespace FestWebSite.Controllers
             };
             _DbContext.RegisterModels.Add(rm);
             _DbContext.SaveChanges();
-            var client = new SendGridClient(SendGridDetails);
+            var client = new SendGridClient(SendGridDetails2);
             var msg = new SendGridMessage
             {
                 From = new EmailAddress("team@67thmilestone.com", "The 67th Milestone Team"),
